@@ -1,0 +1,37 @@
+LangChain is a framework for building applications powered by large language models. It provides tools for chaining together components like prompts, memory, and external data sources.
+
+LangGraph is an extension of LangChain designed for building stateful, multi-step workflows and agent systems. It allows developers to define nodes and edges representing decisions and actions.
+
+FAISS is a library developed by Facebook AI for efficient similarity search and clustering of dense vectors. It is widely used for building vector search systems.
+
+Vector databases store embeddings and allow fast similarity searches. Examples include FAISS, Qdrant, Weaviate, and Pinecone.
+
+Embeddings are numerical representations of text that capture semantic meaning. Similar texts have similar embedding vectors.
+
+RAG stands for Retrieval-Augmented Generation. It combines retrieval of relevant information with language model generation to improve response accuracy.
+
+Chunking is the process of splitting large documents into smaller pieces before embedding them. This improves retrieval accuracy.
+
+Poor chunking can lead to irrelevant or incomplete retrieval results. Choosing the right chunk size is important.
+
+Large language models (LLMs) like LLaMA, GPT, and Claude generate human-like text based on patterns learned during training.
+
+LLMs do not have real-time knowledge unless connected to external data sources like databases or APIs.
+
+Prompt engineering is the process of designing inputs to guide LLM behavior and improve output quality.
+
+Grounding refers to forcing the LLM to base its answers on provided context rather than hallucinating.
+
+Hallucination occurs when an LLM generates incorrect or fabricated information confidently.
+
+Agentic systems are AI systems that can make decisions, use tools, and perform multi-step reasoning to complete tasks.
+
+In production systems, RAG pipelines are often combined with APIs, monitoring, and caching to improve performance and reliability.
+
+FastAPI is a modern Python framework used to build high-performance APIs. It is commonly used to serve AI models in production.
+
+Observability tools like LangSmith and Langfuse help track, debug, and evaluate AI system behavior.
+
+In real-world systems, embeddings are often generated using hosted APIs or GPU-based inference servers for speed and scalability.
+
+Vector search systems can include filtering, metadata tagging, and hybrid search for better results.
