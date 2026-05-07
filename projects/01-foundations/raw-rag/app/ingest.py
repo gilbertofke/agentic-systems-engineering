@@ -24,12 +24,16 @@ def load_document():
 
 
 #Step 2: Split text into chunks
-def chunk_text(text):
+def chunk_text(raw_text,chunk_size=300,overlap=50):
+    chunks=[]
     #Split the text into fixed-sized chunks
-    #Add overlap between chunks
-    #Return list of chunks
+    for i in range(0,len(raw_text),chunk_size-overlap):
+        chunk=raw_text[i:i + chunk_size]
+        chunks.append(chunk)
 
-    pass
+    return chunks
+
+
 
 
 #Step 3:Generate embeddings from the chunks
@@ -67,10 +71,14 @@ def save_faiss_index():
 def main():
 # Execute ingestion pipeline
     raw_text=load_document()
+    chunks=chunk_text(raw_text)
 
-    print(raw_text)
-    print(type(raw_text))
-    print(len(raw_text))
+    for index,chunk in enumerate(chunks):
+        print(f"\n--- Chunk{index +1} ---")
+    
+        print(chunk)
+    print(type(chunks))
+    print(len(chunks))
 
 
 if __name__=="__main__":

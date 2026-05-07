@@ -3,7 +3,7 @@ name = "raw-rag"
 version = "0.1.0"
 description = ""
 authors = [
-    {name = "Gilbert Cheruiyot",email = "gilbertofke@gmail.com"}
+    {name = "Tangus",email = "gilbertofke@gmail.com"}
 ]
 readme = "README.md"
 requires-python = ">=3.11"
