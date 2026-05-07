@@ -1,4 +1,4 @@
-"""" 
+"""
 Raw rag ingestion pipeline
 
 Responsibilities:
@@ -7,7 +7,7 @@ Responsibilities:
 3. Generate embeddings
 4. Store in FAISS
 5. Persist the FAISS index and the chunk metadata
-""""
+"""
 
 #Imports
 
@@ -15,10 +15,12 @@ Responsibilities:
 #Step 1: Load Raw Documents
 
 def load_document():
-    #Open knowldege.txt
-    #Read the text content
-    #Return raw string
-    pass
+   #Open the knowledge base document
+   with open("data/knowledge.txt","r") as file:
+    raw_text=file.read()
+    
+    #Return raw document text as a python string
+    return raw_text
 
 
 #Step 2: Split text into chunks
@@ -63,18 +65,13 @@ def save_faiss_index():
 
 #Main Orchestration flow
 def main():
-      # Execute ingestion pipeline
+# Execute ingestion pipeline
+    raw_text=load_document()
 
-    # Stage 1: Load raw document data
-    # Stage 2: Transform document into chunks
-    # Stage 3: Convert chunks into embeddings
-    # Stage 4: Build searchable vector index
-    # Stage 5: Persist metadata mappings
-    # Stage 6: Persist vector index
-
-    # Confirm successful ingestion completion
-    
-    pass
+    print(raw_text)
+    print(type(raw_text))
+    print(len(raw_text))
 
 
-if__name__=="__main__":
+if __name__=="__main__":
+    main()
